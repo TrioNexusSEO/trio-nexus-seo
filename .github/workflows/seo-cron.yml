@@ -34,6 +34,12 @@ env:
   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
   SITE_URL: https://www.trionexus.org
 
+# ── EXPLICIT WRITE PERMISSION ──
+# Required so the workflow can commit seo-data.json back to the repo.
+# Without this, GITHUB_TOKEN defaults to read-only and the commit step fails with 403.
+permissions:
+  contents: write
+
 jobs:
   seo-cycle:
     name: Run SEO Cycle
