@@ -57,7 +57,7 @@ jobs:
       - name: Run SEO Keyword Research
         if: ${{ github.event.inputs.run_type != 'deploy_only' }}
         run: |
-          node << 'JSEOF'
+          cat > seo-script.cjs << 'JSEOF'
           const fetch = globalThis.fetch || require('node-fetch');
           const fs = require('fs');
 
@@ -170,11 +170,12 @@ jobs:
           fs.writeFileSync('seo-data.json', JSON.stringify(results, null, 2));
           console.log(`\n✓ SEO data saved (run #${results.runs})`);
           JSEOF
+          node seo-script.cjs
 
       - name: Build and Deploy to Netlify
         if: ${{ env.NETLIFY_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
         run: |
-          node << 'JSEOF'
+          cat > deploy-script.cjs << 'JSEOF'
           const fetch = globalThis.fetch || require('node-fetch');
           const fs = require('fs');
           const crypto = require('crypto');
@@ -326,6 +327,7 @@ jobs:
           console.log(`\n✓ Deploy complete: ${uploaded}/${required.length} files uploaded`);
           console.log(`  Total files processed: ${Object.keys(files).length}`);
           JSEOF
+          node deploy-script.cjs
 
       - name: Commit SEO data back to repository
         run: |
