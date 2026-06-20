@@ -60,6 +60,7 @@ jobs:
           cat > seo-script.cjs << 'JSEOF'
           const fetch = globalThis.fetch || require('node-fetch');
           const fs = require('fs');
+          (async () => {
 
           const GEMINI_KEY = process.env.GEMINI_API_KEY;
           if (!GEMINI_KEY) { console.log('No Gemini key — skipping AI steps'); process.exit(0); }
@@ -169,6 +170,7 @@ jobs:
 
           fs.writeFileSync('seo-data.json', JSON.stringify(results, null, 2));
           console.log(`\n✓ SEO data saved (run #${results.runs})`);
+          })().catch(e => { console.error('Fatal error:', e); process.exit(1); });
           JSEOF
           node seo-script.cjs
 
@@ -179,6 +181,7 @@ jobs:
           const fetch = globalThis.fetch || require('node-fetch');
           const fs = require('fs');
           const crypto = require('crypto');
+          (async () => {
 
           const NETLIFY_TOKEN = process.env.NETLIFY_TOKEN;
           const NETLIFY_SITE_ID = process.env.NETLIFY_SITE_ID;
@@ -326,6 +329,7 @@ jobs:
 
           console.log(`\n✓ Deploy complete: ${uploaded}/${required.length} files uploaded`);
           console.log(`  Total files processed: ${Object.keys(files).length}`);
+          })().catch(e => { console.error('Fatal error:', e); process.exit(1); });
           JSEOF
           node deploy-script.cjs
 
