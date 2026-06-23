@@ -316,24 +316,25 @@ jobs:
           }
 
           const deploy = await deployRes.json();
-          const required = deploy.required || [];
-          console.log(`Deploy ID: ${deploy.id} | Files to upload: ${required.length}`);
+          // Netlify's "required" array contains SHA1 HASHES that need uploading — NOT file paths!
+          const requiredHashes = new Set(deploy.required || []);
+          console.log(`Deploy ID: ${deploy.id} | Files required by hash: ${requiredHashes.size}`);
 
-          // Upload required files
+          // Upload files whose digest matches a required hash
           let uploaded = 0;
-          for (const filePath of required) {
-            const content = files[filePath];
-            if (!content) { console.log(`  skip: ${filePath}`); continue; }
+          for (const [filePath, content] of Object.entries(files)) {
+            const hash = fileDigests[filePath];
+            if (!requiredHashes.has(hash)) { console.log(`  skip (already on CDN): ${filePath}`); continue; }
             const uploadRes = await fetch(`https://api.netlify.com/api/v1/deploys/${deploy.id}/files${filePath}`, {
               method: 'PUT',
               headers: { 'Authorization': `Bearer ${NETLIFY_TOKEN}`, 'Content-Type': 'application/octet-stream' },
               body: Buffer.from(content)
             });
-            if (uploadRes.ok) { uploaded++; console.log(`  ✓ ${filePath}`); }
-            else { console.error(`  ✗ ${filePath}: ${uploadRes.status}`); }
+            if (uploadRes.ok) { uploaded++; console.log(`  ✓ uploaded: ${filePath}`); }
+            else { console.error(`  ✗ FAILED: ${filePath}: ${uploadRes.status}`); }
           }
 
-          console.log(`\n✓ Deploy complete: ${uploaded}/${required.length} files uploaded`);
+          console.log(`\n✓ Deploy complete: ${uploaded}/${requiredHashes.size} files uploaded`);
           console.log(`  Total files processed: ${Object.keys(files).length}`);
           })().catch(e => { console.error('Fatal error:', e); process.exit(1); });
           JSEOF
