@@ -16,9 +16,9 @@
       "study abroad Pakistan",
       "overseas education consultants Pakistan",
       "student visa consultants Pakistan",
-      "scholarships for Pakistani students abroad",
-      "Trio Study Abroad Pakistan",
-      "best study abroad consultants Pakistan"
+      "study abroad scholarships Pakistan",
+      "best study abroad consultants Pakistan",
+      "Trio Study Abroad Pakistan"
     ],
     "hr": [
       "HR services Pakistan",
@@ -26,7 +26,11 @@
       "talent acquisition Pakistan",
       "payroll services Pakistan",
       "workforce planning Pakistan",
-      "Trio HR Services Pakistan"
+      "Trio HR Services Pakistan",
+      "HR outsourcing Pakistan",
+      "recruitment agency Pakistan",
+      "employee management Pakistan",
+      "HR consultancy Pakistan"
     ]
   },
   "faqs": [
@@ -48,6 +52,14 @@
     }
   ],
   "blog_posts": [
+    {
+      "title": "Contract Drafting Essentials for Pakistani Businesses",
+      "category": "Legal",
+      "content": "",
+      "excerpt": "...",
+      "date": "29/06/2026",
+      "readTime": "3 min"
+    },
     {
       "title": "Germany Scholarships for Pakistani Students 2025",
       "category": "Study Abroad",
@@ -81,21 +93,22 @@
       "readTime": "3 min"
     }
   ],
-  "runs": 4,
+  "runs": 5,
   "desc_law": "<p></p>",
   "title_law": "Trio Law Consultants",
   "updated_law": "25-Jun-2026",
-  "desc_study": "<p>Embarking on your overseas education journey is a significant step, and as a Pakistani student, navigating the complexities of study abroad can feel daunting. Trio Study Abroad, a leading Pakistani consultancy, is dedicated to simplifying this process for you. We specialize in connecting Pakistani students with premier international education opportunities, covering everything from identifying the best countries for study abroad for Pakistani students to securing scholarships for Pakistani students abroad.</p>\n\n<p>Whether you're looking for overseas education consultants in Pakistan to guide your application, student visa consultants in Pakistan to ensure a smooth entry, or seeking information on how to get a scholarship for overseas education from Pakistan, Trio Study Abroad is your trusted partner. We are recognized as one of the best study abroad consultants in Pakistan, committed to making your dream of studying abroad a reality. Discover the seamless process for obtaining a student visa for study abroad from Pakistan with our expert assistance.</p>",
+  "desc_study": "<p></p>",
   "title_study": "Trio Study Abroad",
-  "updated_study": "23-Jun-2026",
-  "desc_hr": "<p>Trio HR Services offers expert HR management, talent acquisition, and payroll services in Pakistan, addressing key challenges like workforce planning and talent retention. We empower Pakistani businesses to optimize their human capital strategies.</p>\n<p>Discover how Trio HR Services can elevate your organization with our specialized HR solutions in Pakistan. From streamlining payroll to strategic talent acquisition, we are your trusted partners for growth.</p>",
+  "updated_study": "29-Jun-2026",
+  "desc_hr": "<p></p>",
   "title_hr": "Trio HR Services",
-  "updated_hr": "22-Jun-2026",
+  "updated_hr": "29-Jun-2026",
   "used_topics": [
     "Corporate Law Services in Lahore 2025",
     "Poland Student Visa Guide for Pakistanis",
     "HR Payroll Management Best Practices Pakistan",
-    "Germany Scholarships for Pakistani Students 2025"
+    "Germany Scholarships for Pakistani Students 2025",
+    "Contract Drafting Essentials for Pakistani Businesses"
   ],
-  "lastRun": "2026-06-25T17:23:04.303Z"
+  "lastRun": "2026-06-29T16:45:52.192Z"
 }
