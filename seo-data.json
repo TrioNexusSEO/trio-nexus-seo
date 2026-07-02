@@ -15,10 +15,10 @@
     "study": [
       "study abroad Pakistan",
       "overseas education consultants Pakistan",
-      "student visa consultants Pakistan",
+      "student visa Pakistan",
       "study abroad scholarships Pakistan",
-      "best study abroad consultants Pakistan",
-      "Trio Study Abroad Pakistan"
+      "Trio Study Abroad",
+      "best study abroad consultants Pakistan"
     ],
     "hr": [
       "HR services Pakistan",
@@ -52,6 +52,14 @@
     }
   ],
   "blog_posts": [
+    {
+      "title": "Executive Search Trends in Pakistan 2025",
+      "category": "HR",
+      "content": "",
+      "excerpt": "...",
+      "date": "02/07/2026",
+      "readTime": "3 min"
+    },
     {
       "title": "Contract Drafting Essentials for Pakistani Businesses",
       "category": "Legal",
@@ -93,13 +101,13 @@
       "readTime": "3 min"
     }
   ],
-  "runs": 5,
+  "runs": 6,
   "desc_law": "<p></p>",
   "title_law": "Trio Law Consultants",
   "updated_law": "25-Jun-2026",
   "desc_study": "<p></p>",
   "title_study": "Trio Study Abroad",
-  "updated_study": "29-Jun-2026",
+  "updated_study": "02-Jul-2026",
   "desc_hr": "<p></p>",
   "title_hr": "Trio HR Services",
   "updated_hr": "29-Jun-2026",
@@ -108,7 +116,8 @@
     "Poland Student Visa Guide for Pakistanis",
     "HR Payroll Management Best Practices Pakistan",
     "Germany Scholarships for Pakistani Students 2025",
-    "Contract Drafting Essentials for Pakistani Businesses"
+    "Contract Drafting Essentials for Pakistani Businesses",
+    "Executive Search Trends in Pakistan 2025"
   ],
-  "lastRun": "2026-06-29T16:45:52.192Z"
+  "lastRun": "2026-07-02T16:18:21.057Z"
 }
